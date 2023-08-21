@@ -15,6 +15,7 @@ const ErrorPage = () => {
             <h4> Oops, Page Not Found!</h4>
             <p>It looks like nothing was found at this location. Click <Link to="/" className="error-link"> here </Link>  to return Homepage</p>
         </div>
+        {/* "proxy": "http://localhost:3001" */}
 
         <SubscribeForm />
         <FooterNav />

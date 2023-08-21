@@ -19,11 +19,15 @@ const Store = () => {
     const [products, setProducts] = useState([])
     const [categories, setCategories] = useState([])
     const [loading, setLoading] = useState(true)
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+    const [isDataLoaded, setIsDataLoaded] = useState(false); // New state for tracking all data loaded
+
+
 
 
     //Fetch Product
-    const fetchProducts = async () => { 
-        setLoading(true)
+    const fetchProducts = async () => {
+
         try {
             const prodRef = collection(db, 'products')
             const q = query(prodRef, limit(8))
@@ -41,13 +45,13 @@ const Store = () => {
             console.log({ error })
             toast.error("Unable to retrieve products")
         }
-        setLoading(false);
+        setIsDataLoaded(true);
     }
 
 
     //Fetch Categories
     const fetchCategories = async () => {
-        setLoading(true);
+
         try {
             const catRef = collection(db, 'categories')
             const q = query(catRef, orderBy('timeStamp', 'asc'), limit(4))
@@ -66,9 +70,12 @@ const Store = () => {
             toast.error("could not fetch categories")
             console.log({ error })
         }
-        setLoading(false);
+        setIsDataLoaded(true);
     }
 
+    const handleVideoLoad = () => {
+        setIsVideoLoaded(true);
+    };
 
 
     useEffect(() => {
@@ -76,14 +83,19 @@ const Store = () => {
 
             fetchCategories().then();
             fetchProducts().then();
-
+            handleVideoLoad();
         }
         return () => {
             isMounted.current = false;
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isMounted])
- 
+
+    useEffect(() => {
+        if (isVideoLoaded && isDataLoaded) {
+            setLoading(false); // Set loading status to false when both video and data are loaded
+        }
+    }, [isVideoLoaded, isDataLoaded]);
 
     return (
         <>
@@ -91,7 +103,7 @@ const Store = () => {
                 (<PageLoading />) : (
                     <>
                         <HeaderNav />
-                        <HomeHero />
+                        <HomeHero onVideoLoaded={handleVideoLoad} />
                         <HomeCategories categories={categories} />
                         <HomeProducts products={products} />
                         <MostViewed products={products} />

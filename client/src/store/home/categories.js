@@ -22,7 +22,7 @@ const HomeCategories = ({ categories }) => {
         <div className="categories-section">
           <div className="row">
             {categories.slice(0, 3).map((category) => (
-              <div key={category.id} className="col-md-4">
+              <div key={category.id} className="col-lg-4 col-md-6 col-6">
                 <div className="categories-box">
                   <div className="categories-box-wrapper">
                     <div className="img-box">

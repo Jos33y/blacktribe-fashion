@@ -48,7 +48,7 @@ const FooterNav = () => {
                 <div className="row">
 
                     {/* column section */}
-                    <div className="col-lg-3 col-md-4 col-sm-4 col-6">
+                    <div className="col-lg-3 col-md-3 col-sm-6 col-6">
                         <div className="footer-about">
                             <div className="footer-img">
                                 <img src={BlackTemp} alt="footer logo" className="img-fluid" />
@@ -60,7 +60,7 @@ const FooterNav = () => {
                     </div>
 
                     {/* column section */}
-                    <div className="col-lg-3 col-md-4 col-sm-4 col-6">
+                    <div className="col-lg-3 col-md-3 col-sm-6 col-6">
                         <div className="footer-lists">
                             <ul>
                                 <li> <Link className="footer-link" to="/">Home </Link></li>
@@ -72,7 +72,7 @@ const FooterNav = () => {
                     </div>
 
                     {/* column section */}
-                    <div className="col-lg-3 col-md-4 col-sm-4 col-6">
+                    <div className="col-lg-3 col-md-3 col-sm-6 col-6">
                         <div className="footer-lists">
                             <ul>
                                 <li> <Link className="footer-link" to="/track">Track Order </Link></li>
@@ -84,12 +84,12 @@ const FooterNav = () => {
                     </div>
 
                     {/* column section */}
-                    <div className="col-lg-3 col-md-4 col-sm-4 col-6">
+                    <div className="col-lg-3 col-md-3 col-sm-6 col-6">
 
                         <div className="footer-address">
                             <p>  {storeData ? (`${storeData.storeAddress}`) : ('')}</p>
                             <p> <span className="phone-one">{storeData ? (`+${storeData.businessPhoneOne}`) : ('')}</span> </p>
-                            <p> {storeData ? (`${storeData.businessEmail}`) : ('')}</p>
+                            <p className="email"> {storeData ? (`${storeData.businessEmail}`) : ('')}</p>
                         </div>
                         <div className="social-lists">
                             <ul className="social-icons">

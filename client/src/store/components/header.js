@@ -31,7 +31,7 @@ const HeaderNav = () => {
             const q = query(rateRef, orderBy("timeStamp", "asc"), limit(10));
             const querySnap = await getDocs(q);
 
-            let rateInfo = [];
+            let rateInfo = []; 
 
             querySnap.forEach((doc) => {
                 return rateInfo.push({
@@ -101,18 +101,18 @@ const HeaderNav = () => {
         <>
             <div className="top-bar">
                 <div className="row">
-                <div className="col-lg-1 col-md-2 col-sm-0 col-0"></div>
-                    <div className="col-lg-5 col-md-2 col-sm-0 col-0">
+                <div className="col-lg-1 col-md-1 col-sm-0 col-0"></div>
+                    <div className="col-lg-5 col-md-6 col-sm-0 col-0">
                     <p className="tag-line">
                             Embrace Your Style: Discover Black Tribe Fashion
                         </p>
                     </div>
-                    <div className="col-lg-3 col-md-5 col-sm-5 col-12">
+                    <div id="top-insta" className="col-lg-3 col-md-0 col-sm-5 col-12">
                         <p className="tag-line">
-                        <i className="fa-solid fa-mobile-screen"></i>  +1 233 456 5678
+                        <i className="fa-brands fa-square-instagram"></i> blacktribe_lifestyle
                         </p>
                     </div>
-                    <div className="col-lg-3 col-md-5 col-sm-7 col-12">
+                    <div id="top-email" className="col-lg-3 col-md-5 col-sm-7 col-12">
                     <p className="tag-line">
                     <i className="fa-regular fa-envelope"></i>  support@blakctribefashion.com
                         </p>

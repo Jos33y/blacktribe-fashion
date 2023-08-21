@@ -14,7 +14,7 @@ const RelatedProducts = ({ products }) => {
                     {products && products.length > 0 ? (
                         <div className="row">
                             {products.slice(0, 4).map((product) => (
-                                <div key={product.id} className="col-lg-3 col-md-4 col-sm-4 col-6">
+                                <div key={product.id} className="col-lg-3 col-md-6 col-sm-6 col-6">
                                     <ProductCard product={product.data} prod_id={product.id} />
                                 </div>
                             ))}
