@@ -37,7 +37,7 @@ const RateSettings = () => {
         timeStamp: '',
     })
 
-    // &#393; &#393;
+    // &#36; &#36;
 
     const MySwal = withReactContent(Swal)
     const { rateCurrency, rateAmount, currencyName } = rateData;
@@ -190,7 +190,7 @@ const RateSettings = () => {
                     } else if (newValue === 'gmd') {
                         setRateData((prevState) => ({
                             ...prevState,
-                            rateSymbol: "&#393;",
+                            rateSymbol: "&#36;",
                             currencyName: "dalasi",
                         }))
 

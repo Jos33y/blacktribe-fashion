@@ -279,7 +279,7 @@ const TransactionDetailsPage = () => {
                                                                 <p className="info-title">Account Paid From</p>
                                                                 <p className="info-text">{`${transactionData.customerName}`}</p>
                                                                 <p className="info-text">{`${transactionData.customerBank}`}</p>
-                                                                <p className="info-text">Amount: <span className="amount-paid">&#393;{formatPrice(Number(transactionData.amountPaid))} </span> </p>
+                                                                <p className="info-text">Amount: <span className="amount-paid">&#36;{formatPrice(Number(transactionData.amountPaid))} </span> </p>
                                                                 <p className="info-text">Trans Status: <span className={`status ${transactionData.paymentStatus}`}> {getPaymentStatus()} </span> </p>
                                                             </div>
                                                         </div>

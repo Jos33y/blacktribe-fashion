@@ -10,7 +10,7 @@ const HomeCategories = ({ categories }) => {
   };
 
   return (
-    <>
+    <> 
       <div className="categories-wrapper">
         <div className="categories-header">
           <span className="vertical-line"></span>
@@ -21,8 +21,8 @@ const HomeCategories = ({ categories }) => {
 
         <div className="categories-section">
           <div className="row">
-            {categories.slice(0, 3).map((category) => (
-              <div key={category.id} className="col-lg-4 col-md-6 col-6">
+            {categories.slice(0, 2).map((category) => (
+              <div key={category.id} className="col-lg-6 col-md-6 col-6">
                 <div className="categories-box">
                   <div className="categories-box-wrapper">
                     <div className="img-box">

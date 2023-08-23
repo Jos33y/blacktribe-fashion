@@ -433,12 +433,12 @@ const OrderDetailsPage = () => {
                                                                 </div>
                                                                 <div className="prod-ordered-details">
                                                                     <p className="prod-name"> {product.productName}</p>
-                                                                    <p className="prod-price"> &#393;{formatPrice(Number(product.productPrice))}  x {product.qty}</p>
+                                                                    <p className="prod-price"> &#36;{formatPrice(Number(product.productPrice))}  x {product.qty}</p>
                                                                 </div>
                                                             </div>
 
                                                             <div className="prod-ordered-two">
-                                                                <p className="total-price"> &#393;{formatPrice(Number(product.productPrice) * Number(product.qty))}</p>
+                                                                <p className="total-price"> &#36;{formatPrice(Number(product.productPrice) * Number(product.qty))}</p>
                                                             </div>
                                                         </div>
                                                     </>
@@ -448,18 +448,18 @@ const OrderDetailsPage = () => {
                                                 <hr />
                                                 <div className="shipping-info">
                                                     <p className="light-text">Sub total: </p>
-                                                    <p className="bold-text">&#393;{formatPrice(orderData.order_total)} </p>
+                                                    <p className="bold-text">&#36;{formatPrice(orderData.order_total)} </p>
                                                 </div>
                                                 <div className="shipping-info">
                                                     <p className="light-text">Shipping cost: </p>
-                                                    <p className="bold-text">&#393;{formatPrice(Number(deliveryData.deliveryPrice))} </p>
+                                                    <p className="bold-text">&#36;{formatPrice(Number(deliveryData.deliveryPrice))} </p>
                                                 </div>
 
                                                 <hr />
 
                                                 <div className="shipping-info">
                                                     <p className="light-text big-total">Total: </p>
-                                                    <p className="bold-text big-total">&#393;{formatPrice(Number(orderData.order_total) + Number(deliveryData.deliveryPrice))}  </p>
+                                                    <p className="bold-text big-total">&#36;{formatPrice(Number(orderData.order_total) + Number(deliveryData.deliveryPrice))}  </p>
                                                 </div>
                                             </div>
 

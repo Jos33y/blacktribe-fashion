@@ -7,6 +7,6 @@ export const formatPrice = (price) => {
 };
  
 export const formatSymbol = () => {
-  return he.decode(localRate ? localRate.rateSymbol : '&#393;');
+  return he.decode(localRate ? localRate.rateSymbol : '&#36;'); 
 };
  

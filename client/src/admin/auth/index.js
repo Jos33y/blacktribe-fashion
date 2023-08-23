@@ -39,7 +39,7 @@ const AdminLogin = () => {
                 } else {
                     toast.error("invalid login details");
                 }
-            }
+            } 
         } catch (error) {
             console.log({ error });
             toast.error("Can't login user");
