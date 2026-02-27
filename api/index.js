@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyParser.json()); 
 app.use(cors({
     origin: ['http://localhost:3000', 'https://blacktribefashion.com'],
 }));
@@ -36,7 +36,7 @@ app.get("/*", function (_, res) {
 router.post('/send-code-phone', async (req, res) => {
 
     const data = {
-        api_key: "tits",
+        api_key: "TLS3kpbsW1gE1kvi6FhmY69wkuiyFU5kFByo50ewyUACjRywzHyQegwf1ZlcoH",
         message_type: 'NUMERIC',
         to: req.body.phone_number,
         from: 'HairbyTimaB',
@@ -64,7 +64,7 @@ router.post('/send-code-phone', async (req, res) => {
 router.post('/verify-code', async (req, res) => {
 
     const data = {
-        api_key: "tits",
+        api_key: "TLS3kpbsW1gE1kvi6FhmY69wkuiyFU5kFByo50ewyUACjRywzHyQegwf1ZlcoH",
         pin_id: req.body.pin_id,
         pin: req.body.pin,
     };
@@ -88,7 +88,7 @@ router.post('/order-placed-sms', async (req, res) => {
         from: "HairbyTimaB",
         sms: message,
         type: "plain",
-        api_key: "tits",
+        api_key: "TLS3kpbsW1gE1kvi6FhmY69wkuiyFU5kFByo50ewyUACjRywzHyQegwf1ZlcoH",
         channel: "generic",
     };
 
@@ -111,7 +111,7 @@ router.post('/order-confirmed-sms', async (req, res) => {
         from: "HairbyTimaB",
         sms: message,
         type: "plain",
-        api_key: "tits",
+        api_key: "TLS3kpbsW1gE1kvi6FhmY69wkuiyFU5kFByo50ewyUACjRywzHyQegwf1ZlcoH",
         channel: "generic",
     };
 
@@ -134,7 +134,7 @@ router.post('/order-shipped-sms', async (req, res) => {
         from: "HairbyTimaB",
         sms: message,
         type: "plain",
-        api_key: "tits",
+        api_key: "TLS3kpbsW1gE1kvi6FhmY69wkuiyFU5kFByo50ewyUACjRywzHyQegwf1ZlcoH",
         channel: "generic",
     };
 
@@ -157,7 +157,7 @@ router.post('/order-delivered-sms', async (req, res) => {
         from: "HairbyTimaB",
         sms: message,
         type: "plain",
-        api_key: "tits",
+        api_key: "TLS3kpbsW1gE1kvi6FhmY69wkuiyFU5kFByo50ewyUACjRywzHyQegwf1ZlcoH",
         channel: "generic",
     };
 

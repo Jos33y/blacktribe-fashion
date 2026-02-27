@@ -24,7 +24,7 @@ import { CartProvider } from './store/components/cart-context';
 
 const App = () => {
 
-  return (
+  return (  
     <>
       <CartProvider>
         <Router>

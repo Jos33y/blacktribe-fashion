@@ -3,7 +3,7 @@ import { collection, getDocs, query, limit, orderBy } from "firebase/firestore";
 import { db } from "../../firebase.config";
 import { toast } from "react-toastify";
 import FooterNav from "../components/footer";
-import HeaderNav from "../components/header";
+import HeaderNav from "../components/header"; 
 import SubscribeForm from "../components/subscribe";
 import HomeCategories from "./categories";
 import HomeHero from "./hero";
@@ -98,7 +98,7 @@ const Store = () => {
     }, [isVideoLoaded, isDataLoaded]);
 
     return (
-        <>
+        <> 
             {loading ?
                 (<PageLoading />) : (
                     <>

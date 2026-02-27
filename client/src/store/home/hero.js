@@ -37,7 +37,7 @@ const HomeHero = ({onVideoLoaded}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6"> 
                         <div className="hero-video-container">
                             <video autoPlay loop muted playsInline width="100%" height="100%" onLoadedData={onVideoLoaded}>
                                 <source src={heroVideo} type="video/mp4" />

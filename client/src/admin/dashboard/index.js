@@ -34,7 +34,7 @@ const AdminDashboard = () => {
     const params = useParams()
     const navigate = useNavigate()
 
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true) 
     // eslint-disable-next-line
     const [profileData, setProfileData] = useState(null)
 

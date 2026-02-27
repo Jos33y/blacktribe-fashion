@@ -4,13 +4,13 @@ import {
     collection,
     getDocs,
     query,
-    limit,
+    limit, 
     doc,
     getDoc,
     orderBy,
 } from "firebase/firestore";
 import { db } from "../../firebase.config";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; 
 // import BlackTemp from "../assets/images/black_temp_icon.png";
 import { useCart } from "./cart-context";
 import he from "he";
